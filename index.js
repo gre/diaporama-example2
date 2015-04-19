@@ -2,6 +2,23 @@ import Diaporama from "diaporama";
 
 const data = {
   timeline: [
+  {
+    "canvas2d": {
+      "background": "#89B",
+      "size": [ 800, 600 ],
+      "draws": [
+        { "font": "bold 80px sans-serif", "fillStyle": "#fff", "textBaseline": "middle", "textAlign": "center" },
+        [ "fillText", "Diaporama", 400, 250 ],
+        { "font": "normal 80px sans-serif", "fillStyle": "#fff", "textBaseline": "middle", "textAlign": "center" },
+        [ "fillText", "Example 2", 400, 350 ]
+      ]
+    },
+    "duration": 500,
+    "transitionNext": {
+      "duration": 1000
+    }
+  }
+  ].concat([
     "http://i.imgur.com/MQtLWbD.jpg",
     "http://i.imgur.com/N8a9CkZ.jpg",
     "http://i.imgur.com/adCmISK.jpg",
@@ -39,14 +56,14 @@ const data = {
     transitionNext: {
       duration: 1000
     }
-  }))
+  })))
 };
 
 var div = document.createElement("div");
 
 var diaporama = window.diaporama = Diaporama(div, data, {
-  width: 1024,
-  height: 512,
+  width: 512,
+  height: 256,
   resolution: 2,
   backgroundColor: [1,1,0],
   autoplay: true
