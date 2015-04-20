@@ -105,15 +105,7 @@ var diaporama = Diaporama(
     loop: true
   });
 
-var renderCount = 0;
-diaporama.on("render", function () {
-  ++ renderCount;
-});
-diaporama.once("ended", function () {
-  console.log("FPS: "+(1000*renderCount/diaporama.duration));
-});
-
-window.diaporama = diaporama; // play with it.
+window.diaporama = diaporama; // play with this variable :-)
   </script>
 </body>
 </html>
